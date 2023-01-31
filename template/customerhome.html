@@ -1,0 +1,36 @@
+{% extends 'customerbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 20px;
+}
+</style>
+<center>
+<div style="margin: 122px;">
+    
+    <div style="margin:50px;">
+        <hr><img src="../static/images/offers.png" height="70px" width="170px"><hr>
+        {% if count > 0 %}
+        <table style="width: 400px;">
+            {% for d in data %}
+            <tr>
+                <td>
+                    <a href="/customerofferdetails?id={{d.3}}"><img src="../static/images/booknow.png" height="80px" width="80px"></a>
+                </td>
+                <td>
+                    {{d.0}}<br>
+                    for Rs.{{d.1}}/- only<br>
+                    @ {{d.2}}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <h3>No offers near you.. Please keep in contact</h3>
+        {% endif %}
+        <hr>
+    </div>
+    
+    </div>
+</center>
+{% endblock %}

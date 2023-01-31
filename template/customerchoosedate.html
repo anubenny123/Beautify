@@ -1,0 +1,70 @@
+{% extends 'customerbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 10px;
+}
+</style>
+<center>
+<div style="margin: 50px;">
+    <h3>Booking</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Choose date</td>
+                <td><input type="date" id="date" onchange="checkdate()" class="form-control" name="txtDate" required></td>
+            </tr>
+                <tr>
+                <td>Choose Time</td>
+                <td><input type="time" id="time" onchange="checkTime()" class="form-control" name="txtTime" required></td>
+            </tr>
+             <td>
+                <button type="submit" class="btn btn-dark" onclick="alert('booked')">BookNow</button>
+             </td>
+                
+               <!-- <td><input type="submit" class="btn btn-dark" value="Book now" onclick="alert('booked')">BookNow</td> -->
+               <!-- <td> -->
+                <!-- <label>select a Time</label>
+                <input type="time" name="txtTime" id="time" onchange="checktime()"> -->
+                
+                </td>
+              
+               </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</center>
+<script>
+    function checkdate(){
+        var d1=document.getElementById("date").value;
+        
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        dd=dd+1;
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        if(today>d1){
+            
+           alert('Booking not possible');
+           document.getElementById("date").value="";
+       }
+   }
+   
+   var msg="{{msg}}";
+   if(msg!="")
+       alert(msg);
+
+
+
+</script>
+
+
+
+
+
+
+{% endblock %}

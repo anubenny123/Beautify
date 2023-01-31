@@ -1,0 +1,41 @@
+{% extends 'parlourbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 10px;
+}
+th{
+    background-color: black;
+    color:white;
+}
+</style>
+<center>
+<div style="margin: 50px;">
+    <h3>Treatment</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Select treatment</td>
+            </tr>
+            <tr>
+                <td>
+                    {% for c in data %}
+                    <input type="checkbox" name="com" value="{{c.0}}">{{c.2}}<br>
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" class="btn btn-dark" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</center>
+<script>
+    var msg="{{msg}}";
+    if(msg!="")
+        alert(msg);
+</script>
+{% endblock %}

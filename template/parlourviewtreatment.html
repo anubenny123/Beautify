@@ -1,0 +1,40 @@
+{% extends 'parlourbase.html' %}
+{% block content %}
+<style>
+    #data table {
+     border-collapse: collapse;
+     border: none;
+   }
+   th,td{
+       padding: 10px;
+   }
+   th{
+       background-color: black;
+       color: white;
+   }
+   #data tr:nth-child(odd) {background-color: silver;}
+   </style>
+<center>
+<div style="margin: 122px;">
+    <h3>Treatments</h3>
+    
+    <table id="data" border="0" style="margin:50px;"> 
+      
+        <tr>
+            <th>TREATMENT</th>
+        </tr>
+        {% for d in data %}
+        <tr>
+            <td>{{d.0}}</td>
+            
+           
+        </tr>
+        {% endfor %}
+    </table>
+    <form method="POST">
+        {% csrf_token %}
+    <input type="submit" class="btn btn-dark" value="Add more treatment">
+    </form>
+    </div>
+</center>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'customerbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 10px;
+}
+</style>
+<center>
+<div style="margin: 122px;">
+    <h3>Package details</h3>
+    <table  style="margin:50px;"> 
+      
+       
+        {% for d in offer %}
+        <tr>
+                    
+            <td>
+                {{d.2}}<br>
+                For {{d.3}}<br>
+                {{d.4}}<br>
+                Rs.{{d.5}}/-<br>
+               
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <table  style="margin:50px;"> 
+      
+        <tr>
+            <th colspan="2">TREATMENTS INCLUDED:</th>
+        </tr>
+        {% for d in data %}
+        <tr>
+            <td>{{d.0}}</td>
+            <td><img src="../{{d.1}}" style="border-radius: 50%;" height="100px" width="100px"></td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+    <form method="POST">
+        {% csrf_token %}
+    <input type="submit" class="btn btn-dark" value="Book now">
+    </form>
+    </div>
+</center>
+{% endblock %}

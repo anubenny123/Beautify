@@ -1,0 +1,26 @@
+{% extends 'customerbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 20px;
+}
+</style>
+<center>
+    <div style="margin: 50px;">
+        <table style="width: 550px;">
+            {% for d in data %}
+                <tr>
+                    
+                    <td>
+                        {{d.2}}<br>
+                        For {{d.3}}<br>
+                        {{d.4}}<br>
+                        Rs.{{d.5}}/-<br>
+                        <a href="/customerpackagedetails?id={{d.0}}">View more...</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</center>
+{% endblock %}

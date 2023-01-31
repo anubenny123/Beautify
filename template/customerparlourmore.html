@@ -1,0 +1,118 @@
+{% extends 'customerbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 20px;
+}
+</style>
+<center>
+    <div style="margin: 50px;">
+        <table>
+            {% for d in data %}
+                <tr>
+                    <td>
+                        <img src="../{{d.6}}" height="200px" width="200px" style="border-radius: 50%;">
+                    </td>
+                    <td>
+                        <h3>{{d.0}}</h3>
+                        {{d.1}}<br>
+                        {{d.2}}<br>
+                        {{d.3}}<br>
+                        {{d.4}}<br>
+                        {% if chance == 0 %}
+                            {% if rating == 5 %}
+                                <a href="/customerrate?id={{d.4}}&rate=1&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=2&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=3&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=4&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=5&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                            {% elif rating == 4 %}
+                                <a href="/customerrate?id={{d.4}}&rate=1&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=2&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=3&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=4&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=5&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                            {% elif rating == 3 %}
+                                <a href="/customerrate?id={{d.4}}&rate=1&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=2&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=3&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=4&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=5&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                            {% elif rating == 2 %}
+                                <a href="/customerrate?id={{d.4}}&rate=1&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=2&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=3&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=4&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=5&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                            {% elif rating == 1 %}
+                                <a href="/customerrate?id={{d.4}}&rate=1&pemail={{email}}"><img src="../static/images/filledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=2&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=3&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=4&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=5&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                            {% elif rating == 0 %}
+                                <a href="/customerrate?id={{d.4}}&rate=1&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=2&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=3&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=4&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                                <a href="/customerrate?id={{d.4}}&rate=5&pemail={{email}}"><img src="../static/images/unfilledstar.png" height="20px" width="20px"></a>
+                            {% endif %}
+                        {% else %}
+                        {% if rating == 5 %}
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            {% elif rating == 4 %}
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% elif rating == 3 %}
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% elif rating == 2 %}
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% elif rating == 1 %}
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% elif rating == 0 %}
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <a href="customertreatment?id={{email}}"><img src="../static/images/treatment.png" height="200px" width="200px"></a>
+                </td>
+                <td>
+                    <a href="customerpackage?id={{email}}"><img src="../static/images/package.png" height="200px" width="200px"></a>
+                </td>
+                <td>
+                    <a href="customerofferdetails?id={{email}}"><img src="../static/images/offer.png" height="200px" width="200px"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</center>
+{% endblock %}

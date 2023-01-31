@@ -1,0 +1,25 @@
+{% extends 'customerbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 20px;
+}
+</style>
+<center>
+    <div style="margin: 50px;">
+        <table style="width: 550px;">
+            {% for d in data %}
+                <tr>
+                    <td><img src="../{{d.6}}" style="border-radius: 50%;" height="200px" width="200px"></td>
+                    <td>
+                        {{d.2}}<br>
+                        {{d.4}}<br>
+                        Rs.{{d.5}}/-<br>
+                        <a href="/customerchoosedate?id={{d.0}}&type=treatment">Book now</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</center>
+{% endblock %}

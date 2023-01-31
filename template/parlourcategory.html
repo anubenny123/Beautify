@@ -1,0 +1,57 @@
+{% extends 'parlourbase.html' %}
+{% block content %}
+<style>
+ #data table {
+  border-collapse: collapse;
+  border: none;
+}
+th,td{
+    padding: 10px;
+}
+th{
+    background-color: black;
+    color: white;
+}
+#data tr:nth-child(odd) {background-color: silver;}
+</style>
+<center>
+<div style="margin: 50px;">
+    <hr>
+    <h3>Category</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Category</td>
+                <td><input type="text" class="form-control" name="txtCategory" required></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td><input type="submit" class="btn btn-dark" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <table id="data" border="0"  style="margin: 50px; width: 50%;">
+        <tr>
+            <th colspan="2">CATEGORY</th>
+        </tr>
+        {% for d in data %}
+            <tr>
+                <td>{{d.2}}</td>
+                <td><a href="/deletecat?id={{d.0}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+</center>
+<script>
+    var msg="{{msg}}";
+    if(msg!="")
+    {
+        alert(msg);
+        location.href="/parlourcategory";
+    }
+</script>
+{% endblock %}

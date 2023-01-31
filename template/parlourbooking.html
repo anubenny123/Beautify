@@ -1,0 +1,99 @@
+{% extends 'parlourbase.html' %}
+{% block content %}
+<style>
+     table {
+     border-collapse: collapse;
+     border: none;
+   }
+   th,td{
+       padding: 10px;
+   }
+   th{
+       background-color: black;
+       color: white;
+   }
+    tr:nth-child(odd) {background-color: silver;}
+   </style>
+<center>
+<div style="margin: 122px;">
+    <h3>Bookings</h3>
+    <br>
+    <br>
+    <hr>
+    <h5>Offer bookings</h5>
+    <table border="0" style="margin:50px;"> 
+      
+        <tr>
+            <th>OFFER</th>
+            <th>CUSTOMER</th>
+            <th>BOOKING DATE</th>
+            <th>BOOKING TIME</th>
+            <th colspan="2">STATUS</th>
+        </tr>
+        {% for d in offer %}
+        <tr>
+            <td>{{d.0}}</td>
+            <td>{{d.1}}</td>
+            <td>{{d.2}}</td>
+            <td>{{d.5}}</td>
+            <td>{{d.3}}</td>
+           {% if d.3 == 'booked' %}
+            <td><a href="/updatebooking?id={{d.4}}&type=offer">Payment recieved</a></td>
+           {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <hr>
+    <h5>Package bookings</h5>
+    <table border="0" style="margin:50px;"> 
+      
+        <tr>
+            <th>PACKAGE</th>
+            <th>CUSTOMER</th>
+            <th>BOOKING DATE</th>
+            <th>BOOKING TIME</th>
+            <th colspan="2">STATUS</th>
+        </tr>
+        {% for d in package %}
+        <tr>
+            <td>{{d.0}}</td>
+            <td>{{d.1}}</td>
+            <td>{{d.2}}</td>
+            <td>{{d.5}}</td>
+            <td>{{d.3}}</td>
+            {% if d.3 == 'booked' %}
+            <td><a href="/updatebooking?id={{d.4}}&type=package">Payment recieved</a></td>
+           {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    <hr>
+    <h5>Treatment bookings</h5>
+    <table border="0" style="margin:50px;"> 
+      
+        <tr>
+            <th>TREATMENT</th>
+            <th>CUSTOMER</th>
+            <th>BOOKING DATE</th>
+            <th>BOOKING TIME</th>
+            <th colspan="2">STATUS</th>
+        </tr>
+        {% for d in treatment %}
+        <tr>
+            <td>{{d.0}}</td>
+            <td>{{d.1}}</td>
+            <td>{{d.2}}</td>
+            <td>{{d.5}}</td>
+            <td>{{d.3}}</td>
+            {% if d.3 == 'booked' %}
+            <td><a href="/updatebooking?id={{d.4}}&type=treatment">Payment recieved</a></td>
+           {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    </div>
+</center>
+{% endblock %}

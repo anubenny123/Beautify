@@ -1,0 +1,1463 @@
+/*--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  letter-spacing: 1px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body a {
+  outline: none;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: none;
+}
+
+body a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+input[type="button"],
+input[type="submit"] {
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  letter-spacing: 1px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+select,
+input[type="email"],
+input[type="text"],
+input[type=password],
+input[type="button"],
+input[type="submit"],
+textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+/*-- //Reset-Code --*/
+
+.title h3{
+  font-size: 44px;
+  color: #000;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.about-wthree-grid h4,.service-grid-wthree  h4,.blog-left-wthree h4 a,
+.footer-below-grids h4,.blog-left-sub h4 a,.comments-grid-right h4,.w3ls-bottom h4,.blog-full-grid h4 a,.spl-w3layouts-grid h4{
+  font-size: 22px;
+  color:#545454;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+ .footer-below-grids h4 {
+    color: #fff;
+}
+p ,.hair-list li a{
+    font-size: 14px;
+    color: #8e8e8e;
+    line-height: 25px;
+    letter-spacing: 0px;
+}
+
+
+/* header */
+
+
+/* navigation */
+
+
+/* CSS Document */
+
+.toggle-2,
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+
+/* Giving a background-color to the nav container. */
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+#logo h1 a {
+    float: left;
+    display: block;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 0;
+}
+/* Since we'll have the "ul li" "float:left"
+* we need to add a clear after the container. */
+
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Removing padding, margin and "list-style" from the "ul",
+* and adding "position:reltive" */
+
+nav ul {
+    float: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+
+/* Positioning the navigation items inline */
+
+nav ul li {
+  margin: 0px;
+  display: inline-block;
+  float:none;
+}
+
+
+/* Styling the links */
+
+nav ul li a {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    background: transparent;
+    padding: 7px 20px;
+    display: inline-block;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+nav ul li ul li:hover {
+  background: #f8f9fa;
+}
+
+.menu li .drop-text:hover {
+  color: #000;
+  border: none;
+}
+
+
+/* Background color change on Hover */
+
+
+/*.menu li.active a,.menu li a:hover{border-bottom: 1px solid #d4d4d4;}*/
+
+.menu li a:hover {
+  opacity: 0.8;
+  color: #fff;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+
+
+/* Hide Dropdowns by Default
+* and giving it a position of absolute */
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 33px;
+  background: #000;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: -1px 1px 5px black;
+}
+
+
+/* Display Dropdowns on Hover */
+
+nav ul li:hover>ul {
+  display: inherit;
+}
+
+
+/* Fisrt Tier Dropdown */
+
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+nav ul ul li a {
+  color: #fff;
+  padding: 5px 10px;
+  display: block;
+  background: transparent;
+}
+
+
+/* Second, Third and more Tiers	
+* We move the 2nd and 3rd etc tier dropdowns to the left
+* by the amount of the width of the first tier.
+*/
+
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  /* has to be the same number as the "width" of "nav ul ul li" */
+  left: 170px;
+}
+
+
+/* Change ' +' in order to change the Dropdown symbol */
+
+li>a:only-child:after {
+  content: '';
+}
+
+a.reqe-button {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+}
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media(max-width: 800px) {
+  nav a {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 767px) {
+
+nav {
+    margin: 13px 0px;
+}
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle+a,
+  .menu {
+    display: none;
+  }
+  /* Stylinf the toggle lable */
+.toggle {
+    display: block;
+    padding: 6px 17px;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    float: left;
+    margin: 0px 0px;
+    background-color: #dcb704;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+}
+  .menu .toggle{
+    float: none;
+    text-align: center;
+    margin: auto;
+    max-width: 138px;
+    padding: 10px 18px;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+  }
+  .menu .toggle:hover {
+    color: #fff;
+	opacity:.8;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+  }
+  .toggle:hover {
+    color: #000;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+  }
+label.toggle.toogle-2 {
+    /* background: transparent; */
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+.toogle-2 {
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background: no-repeat;
+    float: none;
+    margin: auto;
+    padding: 10px 18px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+  /* Display Dropdown when clicked on Parent Lable */
+[id^=drop]:checked+ul {
+    display: inline-block;
+    background: #000000;
+    padding: 8px 0;
+    text-align: center;
+    width: 100%;
+    top: 0px;
+    box-shadow: 0 1px 20px 0px #212121;
+	z-index:9;
+}
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+  }
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+  nav a:hover,
+  nav ul ul ul a {
+    background-color: transparent;
+  }
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    padding: 14px 20px;
+    color: #FFF;
+    font-size: 15px;
+  }
+  /* 
+nav ul li ul li .toggle,
+nav ul ul a {
+background-color: #212121;
+} */
+  /* Hide Dropdowns by Default */
+  nav ul ul {
+    float: none;
+    position: static;
+    color: #ffffff;
+    /* has to be the same number as the "line-height" of "nav a" */
+  }
+  /* Hide menus on hover */
+  nav ul ul li:hover>ul,
+  nav ul li:hover>ul {
+    display: none;
+  }
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  nav ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+  }
+  nav a {
+    color: #000;
+    font-size: 15px;
+  }
+  .menu li.active a,
+  .menu li a:hover {
+    background: transparent;
+  }
+}
+
+@media all and (max-width: 568px) {
+  nav a,
+  .menu .toggle,
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  nav a,
+  .menu .toggle,
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    font-size: 13px;
+  }
+}
+
+
+/*-- dropdown --*/
+.social-icons ul li a {
+    padding: 0px 7px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    -moz-transition: 0.5s all;
+}
+/*.social-icons ul li a.facebook{background:#0078d7;}
+.social-icons ul li a.twitter{background:#1da1f2;}
+.social-icons ul li a.rss{background:#f26522;}
+.social-icons ul li a.gmail{background:#dd4b39;}*/
+
+.social-icons ul li a span{
+  color: #fff;
+  font-size:15px;
+  line-height:34px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  -moz-transition: 0.5s all;
+}
+.social-icons ul li a:hover{opacity:0.8;}
+
+.social-icons {
+    padding-top: 7px;
+	text-align: right;
+}
+
+/* banner */
+
+.main-top {
+  background: url(../images/b4.jpg) no-repeat bottom;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  min-height: 800px;
+}
+
+.headder-top {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    padding: 1em 2em;
+}
+
+.style-banner {
+    padding-top: 15.5em;
+}
+
+.style-banner h5 {
+    font-size: 28px;
+    color: #fff;
+}
+.main-banner h4 {
+    color: #ff0779;
+    font-size: 4.5em;
+    font-weight: bolder;
+    line-height: 71px;
+    letter-spacing: 9px;
+    text-shadow: 2px 1px 15px #212121;
+}
+
+
+/* //banner */
+/*--inner-banner -- */
+
+.inner_page-banner {
+  background: url(../images/b4.jpg) no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  min-height: 300px;
+}
+
+.using-border {
+    width: 100%;
+    border: none;
+    background: #eaeaea;
+    box-shadow: 0 0 5px #d6d6d6;
+}
+ul.short_ls li a {
+    color: #ff0779;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0px;
+}
+ul.short_ls li {
+  list-style: none;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #000;
+}
+/*-- //inner-banner --*/
+/* about */
+.about-fashion-grid,.w3ls-bottom,.text-w3layouts-grids{
+    background:#fffefefc;
+    padding: 2em 2em;
+    /* text-shadow: 0 0 black; */
+    box-shadow: 0px 0px 8px 1px #d4d4d4;
+}
+.about-icon span {
+    font-size: 48px;
+    color: #dcb704;
+}
+/*--about-- */
+/* service */
+.service,.price {
+    background: #fbfbfb;
+}
+/* //service */
+.blog-w3layouts-position {
+    width: 74%;
+    margin: 0px auto;
+	}
+.blog-some-txt,.blog-mid-txt {
+    position: absolute;
+    background: #ffffff;
+    padding: 2em 2em;
+    box-shadow: 0 0 6px 0px #d4d4d4;
+
+}
+.blog-some-txt{   
+ top: -33px;
+    right: -47px;
+    width: 52%;}
+.blog-mid-position{
+    background: url(../images/s3.jpg) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 583px;
+}
+.blog-mid-txt {
+    width: 29%;
+    top: -76px;
+    left: 112px;
+}
+.blog-buttn a {
+    font-size: 15px;
+    color: #ff0779;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding: 8px 14px;
+    outline: none;
+    /* font-weight: 700; */
+    border-radius: 0px;
+    background-color: transparent;
+    border: 1px solid #6b6a6a;
+}
+.color-number {
+    width: 45px;
+    height: 49px;
+    background: #ff0779;
+    box-shadow: 0px 0px 4px #adadad;
+}
+.color-number h5 {
+    font-size: 39px;
+    color: #fff;
+    line-height: 34px;
+    text-align: center;
+}
+.blog-first{
+background: url(../images/blog1.jpg) no-repeat;}
+.blog-second{background: url(../images/blog2.jpg) no-repeat;}
+.blog-first,.blog-second{
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+-ms-background-size: cover;
+    min-height:400px;}
+
+.blog-full-grid {
+    background: #fbfbfb;
+    padding: 4em 4em;
+}
+.blog-full-grid{
+    background: #fbfbfb;
+    padding: 4em 4em;
+}
+/*--// blog--*/
+/*--// gallery-- */
+.gallery-grids img {
+    padding: 10px;
+}
+/* popup */
+
+.popup-effect {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+}
+
+.popup-effect:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  background: #fff;
+  border-radius: 4px;
+  max-width: 430px;
+  position: relative;
+  margin: 3em auto;
+  padding: 3em 2em;
+  z-index: 999;
+  text-align: center;
+}
+
+.popup .close {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.popup .close:hover {
+  color: #686de0;
+}
+/* //popup */
+
+/*--// gallery-- */
+
+/*--map-- */
+.address_mail_footer_grids iframe {
+    width: 100%;
+    height: 32em;
+    border: none;
+}
+/*--//map-- */
+/*--contact--*/
+.contact-forms input, .contact-forms textarea {
+    font-size: 14px;
+    color: #000;
+    padding: .9em 1em;
+    outline: none;
+    border: none;
+    border: none;
+    border-radius: 0px;
+    margin-bottom: 36px;
+    outline: none;
+    background: #fff;
+    box-shadow: 0px 0px 4px #c5c5c5;
+}
+.contact-forms textarea {
+    resize: none;
+    height:11em;
+}
+.contact-form-txt {
+    padding: 2em 2em;
+    background: #f1f1f1;
+}
+.sent-butnn {
+    font-size: 16px;
+	width:100%;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background:#272727;
+    padding: 7px 20px;
+    border-radius: 0px;
+    color: #fff;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+/*--//contact--*/
+/*-- footer-- */
+/*--Newsletter--*/
+.footer-bottom{background:#000;}
+.subscribe-butn {
+    color: #ffffff;
+    border: none;
+       padding: 7px 12px;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 0px;
+    background: #ff0779;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+.newsletter-footers {
+    width: 50%;
+    margin: 0px auto;
+}
+.newsletter-footers input[type="email"] {
+    width: 79%;
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    padding: .6em 0em;
+    outline: none;
+    border: none;
+    /* border-bottom: 2px solid #28a745; */
+    border-radius: 0px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+/*--//Newsletter--*/
+.footer-w3layouts-head h2 a {
+    font-size: 29px;
+    font-weight: 400;
+    color: #fff;
+}
+a.move-top span{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+}
+
+.address-grids-by p,.address-grids-by p a{
+font-size:14px;
+    color: #8c8c8c;
+    line-height: 25px;
+}
+.hair-list li{display:block;}
+.single-title.text-left h4,.text-w3layouts-grids h4 {
+    font-size: 17px;
+    letter-spacing: 0px;
+    font-weight: 600;
+    color: #ff0779;
+}
+.hair-list li a, .single-title ul li, .single-title ul li a{
+    font-size: 15px;
+    font-weight: 600;
+    color: #676464;
+    line-height: 36px;
+}
+.address-grids-by p a:hover,.subscribe-butn:hover,.blog-buttn a:hover,.sent-butnn:hover,.hair-list li a:hover{opacity:.8;}
+.bottem-wthree-footer p {
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.bottem-wthree-footer p a {
+    color: #00d0ff;
+    font-size: 14px;
+}
+.bottem-wthree-footer p a:hover{color:#fff;}
+.bottem-wthree-footer {
+    background: #525252;
+}
+/*--footer--*/
+
+/*--responsive--*/
+@media(max-width:1920px){
+	
+}
+@media(max-width:1680px){
+	
+}
+@media(max-width:1600px){
+	
+}
+@media(max-width:1440px){
+
+.main-top {
+    min-height: 680px;
+}	
+.style-banner {
+    padding-top: 12.5em;
+}
+.main-banner h4 {;
+    font-size: 4.2em;
+	}
+	.style-banner h5 {
+    font-size: 26px;
+	}
+#logo h1 a {
+    font-size: 33px;
+}
+.about-icon span {
+    font-size: 45px;
+}
+.title h3 {
+    font-size: 41px;
+	}
+.blog-some-txt, .blog-mid-txt {
+    padding: 1.8em 1.8em;
+	}
+.inner_page-banner {
+    min-height: 279px;
+}
+.blog-full-grid {
+    padding: 3.7em 4em;
+}
+.contact-forms input, .contact-forms textarea {
+    margin-bottom: 31px;
+}
+}
+@media(max-width:1366px){
+.headder-top {
+    padding: 1em 1.6em;
+}
+.about-fashion-grid, .w3ls-bottom, .text-w3layouts-grids {
+    padding: 1.8em 1.8em;
+}
+.color-number h5 {
+    font-size: 37px;
+}
+.blog-mid-txt {
+    width: 32%;
+	}
+.footer-w3layouts-head h2 a {
+    font-size: 27px;
+	}
+.contact-forms textarea {
+    height: 10em;
+}
+}
+@media(max-width:1280px){
+.about-icon span {
+    font-size: 43px;
+}
+.main-banner h4 {
+    font-size: 4em;
+}
+.about-wthree-grid h4, .service-grid-wthree h4, .blog-left-wthree h4 a, .footer-below-grids h4, .blog-left-sub h4 a, .comments-grid-right h4, .w3ls-bottom h4, .blog-full-grid h4 a, .spl-w3layouts-grid h4 {
+    font-size: 20px;
+}
+.subscribe-butn {
+    font-size: 15px;
+}	
+.newsletter-footers input[type="email"] {
+    padding: .5em 0em;
+    width: 80%;
+	}
+.inner_page-banner {
+    min-height: 260px;
+}
+.blog-full-grid {
+    padding: 3.7em 3.5em;
+}
+.address_mail_footer_grids iframe {
+    height: 31.5em;
+}
+}
+@media(max-width:1080px){
+.main-top {
+    min-height: 600px;
+}
+.main-banner h4 {
+    line-height: 64px;
+	}
+.style-banner {
+    padding-top: 10.3em;
+}
+.title h3 {
+    font-size: 39px;
+}
+.about-fashion-grid, .w3ls-bottom, .text-w3layouts-grids {
+    padding: 1.5em 1.5em;
+}
+.blog-w3layouts-position {
+    width: 84%;
+}
+.blog-mid-txt {
+    width: 39%;
+}
+.newsletter-footers {
+    width: 59%;
+}
+.hair-list li a, .single-title ul li, .single-title ul li a{
+    line-height: 34px;
+}
+}
+@media(max-width:1050px){
+.about-icon span {
+    font-size: 39px;
+}
+.style-banner h5 {
+    font-size: 24px;
+}
+#logo h1 a {
+    font-size: 30px;
+}
+.blog-buttn a {
+    padding: 7px 12px;
+	}
+.blog-full-grid {
+    padding: 3.5em 3.5em;
+}
+}
+@media(max-width:1024px){
+.color-number {
+    width: 43px;
+    height: 46px;
+	}
+	nav ul li a {
+    padding: 7px 17px;
+	}
+.social-icons ul li a span {
+    font-size: 14px;
+	}
+	.title h3 {
+    font-size: 37px;
+}
+.blog-mid-txt {
+    width: 42%;
+}
+.main-banner h4 {
+    letter-spacing: 7px;
+	}
+.inner_page-banner {
+    min-height: 235px;
+}
+.sent-butnn {
+    font-size: 15px;
+	}
+}
+@media(max-width:991px){
+.main-top {
+    min-height: 550px;
+}
+.style-banner {
+    padding-top: 9.5em;
+}
+.main-banner h4 {
+    font-size: 3.7em;
+}
+.style-banner {
+    padding-top: 9.5em;
+}
+.blog-w3layouts-position {
+    width: 100%;
+}
+.blog-some-txt {
+    top: -19px;
+    right: -70px;
+    width: 57%;
+}	
+.blog-mid-txt {
+    width: 47%;
+}
+.newsletter-footers {
+    width: 79%;
+}
+.hair-list li a, .single-title ul li, .single-title ul li a{
+    font-size: 14px;
+}
+.spl-w3layouts-grid{
+    text-align: center;
+}
+.contact-forms input, .contact-forms textarea {
+padding: .8em .8em;
+}
+.contact-forms textarea {
+    height: 9em;
+}
+.address_mail_footer_grids iframe {
+    height: 29.6em;
+}
+}
+@media(max-width:900px){
+.style-banner h5 {
+    font-size: 23px;
+}
+.jst-img-grided:nth-child(2) {
+    margin: 22px 0px;
+}	
+.blog-some-txt, .blog-mid-txt {
+    padding: 1.6em 1.6em;
+}
+.blog-mid-txt {
+width: 52%;
+top: -53px;
+left: 80px;
+}
+nav ul li a {
+    padding: 7px 12px;
+    letter-spacing: 1px;
+}
+.blog-full-grid {
+    padding: 3.3em 3.2em;
+}
+}
+@media(max-width:800px){
+#logo h1 a {
+    font-size: 28px;
+}
+.headder-top {
+    padding: 1em 1.2em;
+}
+.social-icons ul li a {
+    padding: 0px 5px;
+}	
+.about-icon span {
+    font-size: 36px;
+}
+.blog-some-txt {
+    top: -2px;
+    right: -26px;
+}
+.blog-mid-txt {
+    width: 57%;
+	}
+	.footer-w3layouts-head h2 a {
+    font-size: 26px;
+}
+.inner_page-banner {
+    min-height: 220px;
+}
+.contact-form-txt {
+    padding: 1.8em 1.8em;
+	}
+}
+@media(max-width:768px){
+	.main-banner h4 {
+    font-size: 3.5em;
+}
+.title h3 {
+    font-size: 34px;
+}
+.blog-some-txt {
+    right: -4px;
+}
+.color-number h5 {
+    font-size: 35px;
+}
+.blog-buttn a {
+    padding: 6px 11px;
+    font-size: 14px;
+}
+.blog-full-grid {
+    padding: 3em 3em;
+}
+}
+@media(max-width:767px){
+.social-icons {
+    text-align: left;
+	padding-top:0px;
+}
+#logo h1 a {
+    float: none;
+	}
+.style-banner {
+    text-align: center;
+    padding-top: 8.5em;
+}
+.main-top {
+    min-height: 508px;
+}
+.main-banner h4 {
+    line-height: 58px;
+}
+.title{
+    margin-bottom: 15px;
+}
+.about-wthree-grid h4, .service-grid-wthree h4, .blog-left-wthree h4 a, .footer-below-grids h4, .blog-left-sub h4 a, .comments-grid-right h4, .w3ls-bottom h4, .blog-full-grid h4 a, .spl-w3layouts-grid h4 {
+    font-size: 19px;
+}
+.blog-some-txt, .blog-mid-txt {
+    position: inherit;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 1.4em 1.4em;
+}
+.color-number {
+    width: 42px;
+    height: 44px;
+}
+.color-number h5 {
+    line-height: 31px;
+}
+.newsletter-footers {
+    width:89%;
+}
+.subscribe-butn {
+    font-size: 14px;
+}
+.newsletter-footers input[type="email"] {
+    padding: .5em 0em;
+    width: 77%;
+}
+.pricing-grid{
+    width: 58%;
+    margin: 0px auto;
+}
+.address_mail_footer_grids iframe {
+    height: 18em;
+}
+.contact-forms input, .contact-forms textarea {
+    padding: .7em .8em;
+    margin-bottom: 23px;
+}
+}
+@media(max-width:736px){
+.about-fashion-grid, .w3ls-bottom, .text-w3layouts-grids {
+    padding: 1.3em 1.3em;
+}
+.about-icon span {
+    font-size: 33px;
+}
+.footer-w3layouts-head h2 a {
+    font-size: 25px;
+}
+.style-banner h5 {
+    font-size: 22px;
+}	
+.hair-list li a, .single-title ul li, .single-title ul li a{
+    line-height: 31px;
+}
+}
+@media(max-width:667px){
+.main-banner h4 {
+    letter-spacing: 5px;
+}	
+.title h3 {
+    font-size: 32px;
+}
+nav ul li a {
+    padding: 6px 12px;
+	}
+.about-icon span {
+    font-size: 30px;
+}
+.inner_page-banner {
+    min-height: 213px;
+}
+.blog-full-grid {
+    padding: 2.7em 2.7em;
+}
+}
+@media(max-width:640px){
+.main-banner h4 {
+    line-height: 48px;
+	font-size: 3.2em;
+}	
+.main-top {
+    min-height: 474px;
+}
+#logo h1 a {
+    font-size: 27px;
+}
+}
+@media(max-width:600px){
+.subscribe-butn {
+letter-spacing: 1px;
+}	
+.color-number h5 {
+    font-size: 33px;
+}
+.style-banner h5 {
+    font-size: 20px;
+}
+.headder-top {
+    padding: 1em 1em;
+}
+.blog-first, .blog-second {
+    min-height: 379px;
+}
+.contact-form-txt {
+    padding: 1.6em 1.6em;
+}
+.address_mail_footer_grids iframe {
+    height: 15em;
+}
+}
+@media(max-width:568px){
+.service-grid-wthree{
+    text-align: center;
+}	
+.toggle {
+    padding: 5px 16px;
+	}
+nav {
+    margin: 11px 0px;
+}
+.pricing-grid {
+    width: 63%
+	}
+.about-imgs-txt,.about-wthree-clients{
+    width: 50%;
+}
+.gallery-img-grid {
+    width: 50%;
+}
+.blog-full-grid {
+    padding: 2.5em 2.5em;
+}
+.contact-forms input, .contact-forms textarea {
+    margin-bottom: 18px;
+}
+.single-title {
+    margin-top: 22px;
+}
+}
+@media(max-width:480px){
+.main-banner h4 {
+    line-height:42px;
+    font-size: 2.9em;
+	letter-spacing: 3px;
+}
+.main-top {
+    min-height: 442px;
+}
+.about-fashion-grid, .w3ls-bottom, .text-w3layouts-grids {
+    padding: 1.1em 1.1em;
+}
+.blog-some-txt, .blog-mid-txt {
+    padding: 1.2em 1.2em;
+}
+.color-number {
+    width: 40px;
+    height: 42px;
+}
+.bottem-wthree-footer p {
+    letter-spacing: 1px;
+}
+.newsletter-footers {
+    width: 100%;
+}
+.newsletter-footers input[type="email"] {
+    width: 78%;
+}
+.pricing-grid {
+    width: 68%;
+}
+.about-imgs-txt, .about-wthree-clients {
+    width: 60%;
+    margin: 0px auto;
+}
+.pricing-grid {
+    width: 72%;
+}
+.blog-first, .blog-second {
+    min-height: 304px;
+}
+}
+@media(max-width:440px){
+nav ul li a {
+    padding: 5px 12px;
+}
+.style-banner h5 {
+    font-size: 19px;
+}
+.title h3 {
+    font-size: 31px;
+    letter-spacing: 1px;
+}	
+.color-number h5 {
+    font-size: 30px;
+}
+.newsletter-footers input[type="email"] {
+    width: 75%;
+}
+.blog-full-grid {
+    padding: 2.2em 2.2em;
+}
+.address_mail_footer_grids iframe {
+    height: 12em;
+}
+.contact-form-txt {
+    padding: 1.4em 1.4em;
+}
+}
+@media(max-width:414px){
+.about-icon span {
+    font-size: 28px;
+}	
+.social-icons ul li a {
+    padding: 0px 4px;
+}
+#logo h1 a {
+    font-size: 26px;
+    letter-spacing: 0px;
+}
+.newsletter-footers input[type="email"] {
+    width: 74%;
+}
+.about-imgs-txt, .about-wthree-clients {
+    width: 67%;
+	}
+}
+@media(max-width:384px){
+.main-banner h4 {
+    font-size: 2.7em;
+}
+.footer-w3layouts-head h2 a {
+    font-size: 24px;
+}
+.newsletter-footers input[type="email"] {
+    width: 71%;
+}
+.pricing-grid {
+    width: 77%;
+}
+.about-imgs-txt, .about-wthree-clients {
+    width: 79%;
+}
+.gallery-img-grid {
+    width: 74%;
+    margin: 0px auto;
+}
+.blog-first, .blog-second {
+    min-height: 281px;
+}
+.blog-full-grid {
+    padding: 2em 2em;
+}
+}
+@media(max-width:375px){
+.main-top {
+    min-height: 416px;
+}
+.style-banner {
+    padding-top: 8em;
+}
+.style-banner h4{
+    font-size: 2.6em;
+	}
+.title h3 {
+    font-size: 30px;
+	}
+.newsletter-footers input[type="email"] {
+    width: 70%;
+}
+.gallery-img-grid {
+    width: 79%;
+}
+.contact-forms textarea {
+    height: 8em;
+}
+}
+@media(max-width:320px){
+.about-fashion-grid,.w3ls-bottom,.text-w3layouts-grids {
+    padding: 1em 1em;
+}
+.about-icon span {
+    font-size: 26px;
+}
+.color-number {
+    width: 38px;
+    height: 38px;
+}
+.color-number h5 {
+    font-size: 28px;
+    line-height: 29px;
+}	
+.newsletter-footers input[type="email"] {
+    width: 65%;
+}
+.about-imgs-txt, .about-wthree-clients {
+    width: 90%;
+}
+.pricing-grid {
+    width: 88%;
+}
+.gallery-img-grid {
+    width: 90%;
+}
+.blog-first, .blog-second {
+    min-height: 247px;
+}
+.blog-full-grid {
+    padding: 1.5em 1.5em;
+}
+}
+/*--//responsive--*/
+

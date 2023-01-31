@@ -1,0 +1,80 @@
+{% extends 'commonbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 10px;
+}
+</style>
+<center>
+<div style="margin: 50px;">
+    <h3>Parlour Registration</h3>
+    <form method="POST" style="margin: 50px;" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" class="form-control" name="txtName" pattern="[a-zA-Z ]+" required></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea class="form-control" name="txtAddress"  required></textarea></td>
+            </tr>
+            <tr>
+                <td>Place</td>
+                <!-- <td><select name="textarea" class="form-control"> -->
+                    <td><input type= "text" class="form-control" name="txtplace" requried></td>
+                    <!-- <option>Thiruvananthapuram</option>
+                    <option>Kollam</option>
+                    <option>Pathanamthitta</option>
+                    <option>Alappuzha</option>
+                    <option>Idukki</option>
+                    <option>Kottayam</option>
+                    <option>Ernakulam</option>
+                    <option>Thrissur</option>
+                    <option>Palakkad</option>
+                    <option>Malappuram</option>
+                    <option>Kozhikod</option>
+                    <option>Wayanad</option>
+                    <option>Kannur</option>
+                    <option>Kasargod</option>
+                    </select> -->
+                </td>
+            </tr>
+            <tr>
+                <td>Contact</td>
+                <td><input type="text" class="form-control" name="txtContact" pattern="[6789][0-9]{9}" required></td>
+            </tr>
+            <tr>
+                <td>License no</td>
+                <td><input type="text" class="form-control" name="txtLicense" required></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" class="form-control" name="txtEmail"  required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" class="form-control" name="txtPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required></td>
+            </tr>
+            <tr>
+                <td>Upload image</td>
+                <td><input type="file" class="form-control" name="txtFile" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" class="btn btn-dark" value="Register"></td>
+              
+            </tr>
+        </table>
+    </form>
+</div>
+
+</center>
+<script>
+    var msg="{{msg}}";
+    if(msg!="")
+        alert(msg);
+    
+               
+</script>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'customerbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 20px;
+}
+</style>
+<center>
+<div style="margin: 50px;">
+    <h3 style="margin: 50px;">Parlours near you</h3>
+    
+        
+        <table style="width: 650px;">
+            {% for d in near %}
+            <tr>
+                <td><img src="../{{d.6}}" height="150px" width="150px" style="border-radius: 50%;"></td>
+                <td><h5>{{d.0}}</h5>
+                {{d.1}}<br>
+                {{d.2}}<br>
+                {{d.3}}<br>
+                {{d.4}}<br>
+                <a href="/customerparlourmore?id={{d.4}}">View more...</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <h3 style="margin: 50px;">Other parlours</h3>
+    
+        
+        <table style="width: 650px;">
+            {% for d in far %}
+            <tr>
+                <td><img src="../{{d.6}}" height="150px" width="150px" style="border-radius: 50%;"></td>
+                <td><h5>{{d.0}}</h5>
+                {{d.1}}<br>
+                {{d.2}}<br>
+                {{d.3}}<br>
+                {{d.4}}<br>
+                <a href="/customerparlourmore?id={{d.4}}">View more...</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+   
+    </div>
+</center>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'adminbase.html' %}
+{% block content %}
+<style>
+th,td{
+    padding: 10px;
+}
+</style>
+
+<div style="margin: 122px;">
+    <h3 style="margin: 50px;"><hr>Feedback<hr></h3>
+    {% for d in data %}
+        <tr>
+            <td>
+                Customer: {{d.6}}<br>
+                {{d.3}}<br>
+                Feedback on :
+                {% if d.4 == 5 %}
+                                <button type="button" class="btn btn-warning">Well done!</button>
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                                <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            {% elif d.4 == 4 %}
+                            <button type="button" class="btn btn-warning">Well done!</button>
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% elif d.4 == 3 %}
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% elif d.4 == 2 %}
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% elif d.4 == 1 %}
+                            <button type="button" class="btn btn-danger">Suspend</button>
+                            <img src="../static/images/filledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% elif d.4 == 0 %}
+                            
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            <img src="../static/images/unfilledstar.png" height="20px" width="20px">
+                            {% endif %}
+
+                <br>
+                {{d.5}}<br><br><hr><br>
+            </td>
+            
+        </tr>
+    {% endfor %}
+</div>
+
+{% endblock %}
